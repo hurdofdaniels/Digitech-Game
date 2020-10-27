@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    public Rigidbody rb;
+    
     public CharacterController controller;
 
+    public Vector3 playerPos;
+    
+    public float lerpSpeed;
+    
     public LayerMask groundLayer;
     
     public Vector3 playerVelocity;
@@ -21,14 +24,25 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
-        //controller = gameObject.GetComponent<CharacterController>();
+        controller = gameObject.GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         playerMovement();
+        playerJump();
+    }
+
+    void playerJump()
+    {
+        if (Input.GetButtonDown("Jump") && groundedPlayer)
+        {
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+        }
+
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 
     void playerMovement()
@@ -37,36 +51,29 @@ public class PlayerController : MonoBehaviour
         {
             playerVelocity.y = 0f;
         }
-        
+
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        move = transform.TransformDirection(move);
+        move *= (playerSpeed * Time.deltaTime);
 
-        rb.velocity = move;
-        
-        //transform.position = Vector3.Lerp(transform.position, move, lerpSpeed);
-
-        //controller.Move(move * Time.deltaTime * playerSpeed);
-
-        /*if (move != Vector3.zero)
+        if (move != Vector3.zero)
         {
+            Vector3 lerpTo = Vector3.zero;
+            lerpTo.y = Camera.main.transform.rotation.eulerAngles.y;
+            Debug.Log(lerpTo);
+            gameObject.transform.rotation = Quaternion.Euler(lerpTo);
+            
             gameObject.transform.forward = move;
-        }*/
-
-        if (Input.GetButtonDown("Jump") && groundedPlayer)
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }
-
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        rb.velocity = move;
-        //controller.Move(playerVelocity * Time.deltaTime);
     }
-    
+
+    #region GroundDetection
     private bool IsFloor(Vector3 v) {
         float angle = Vector3.Angle(Vector3.up, v);
         return angle < 35f;
     }
     
-    private bool cancellingGrounded;
+    private bool _cancellingGrounded;
     
     private void OnCollisionStay(Collision other) {
         //Make sure we are only checking for walkable layers
@@ -79,15 +86,15 @@ public class PlayerController : MonoBehaviour
             //FLOOR
             if (IsFloor(normal)) {
                 groundedPlayer = true;
-                cancellingGrounded = false;
+                _cancellingGrounded = false;
                 CancelInvoke(nameof(StopGrounded));
             }
         }
 
         //Invoke ground/wall cancel, since we can't check normals with CollisionExit
         float delay = 3f;
-        if (!cancellingGrounded) {
-            cancellingGrounded = true;
+        if (!_cancellingGrounded) {
+            _cancellingGrounded = true;
             Invoke(nameof(StopGrounded), Time.deltaTime * delay);
         }
     }
@@ -95,4 +102,5 @@ public class PlayerController : MonoBehaviour
     private void StopGrounded() {
         groundedPlayer = false;
     }
+    #endregion
 }
