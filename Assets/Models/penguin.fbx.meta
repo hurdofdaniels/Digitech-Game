@@ -2,8 +2,27 @@ fileFormatVersion: 2
 guid: ca1a052e0458169428c70bfac3bbb705
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
-  externalObjects: {}
+  internalIDToNameTable:
+  - first:
+      74: 4781951162920444690
+    second: Idle
+  - first:
+      74: 2667949614841947897
+    second: Walk
+  - first:
+      74: 5539831331247536789
+    second: Jump
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 91349905d55769549b78c86f7bde34c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tux_penguin
+    second: {fileID: 2100000, guid: ab0c1ad4cc0cbe14b9b47bf51166e952, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -23,20 +42,107 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 90
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump
+      takeName: Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 180
+      lastFrame: 239
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -73,7 +179,123 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: penguin(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: penguin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: ValveBiped.Bip01_Spine
+      parentName: Armature
+      position: {x: -0, y: 0.019985802, z: 0.089788675}
+      rotation: {x: 0.7224763, y: -0.00000008242078, z: -0.00000008612587, w: 0.6913957}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: ValveBiped.Bip01_Head1
+      parentName: ValveBiped.Bip01_Spine
+      position: {x: 5.684342e-16, y: 0.15234278, z: 0.0000000011920929}
+      rotation: {x: 0.08805667, y: -0.000000118746335, z: -0.000000031491524, w: 0.9961155}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_Head1_end
+      parentName: ValveBiped.Bip01_Head1
+      position: {x: -0, y: 0.04450161, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_L_Thigh
+      parentName: ValveBiped.Bip01_Spine
+      position: {x: -0.039999995, y: 0.00021048776, z: -0.000023459195}
+      rotation: {x: 0.99968094, y: -0.008811262, z: -0.009042786, w: 0.021878429}
+      scale: {x: 0.99998844, y: 0.9999998, z: 0.9999346}
+    - name: LeftLowerLeg
+      parentName: ValveBiped.Bip01_L_Thigh
+      position: {x: -0.0006848695, y: 0.04114774, z: 0.000012390545}
+      rotation: {x: -0.11903933, y: 0.69689506, z: -0.6948108, w: -0.1319278}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_L_Foot
+      parentName: LeftLowerLeg
+      position: {x: 0, y: 0, z: -0.03709987}
+      rotation: {x: 0.000000024214383, y: 0.0000000372529, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_L_Foot_end
+      parentName: ValveBiped.Bip01_L_Foot
+      position: {x: 0, y: 0.0812871, z: 0}
+      rotation: {x: -0.000000026077029, y: -0.0000000372529, z: -0.000000014901159,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_L_UpperArm
+      parentName: ValveBiped.Bip01_Spine
+      position: {x: -0.06345677, y: 0.15234275, z: 0.000000014901163}
+      rotation: {x: 0.5148489, y: -0.514112, z: -0.49150944, w: -0.47857913}
+      scale: {x: 0.99999976, y: 0.9999999, z: 0.99999976}
+    - name: ValveBiped.Bip01_L_Forearm
+      parentName: ValveBiped.Bip01_L_UpperArm
+      position: {x: -0.0000002328307, y: 0.04864447, z: -0.00000077020394}
+      rotation: {x: -0.025199011, y: 0.00024053454, z: -0.009537876, w: 0.999637}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: ValveBiped.Bip01_L_Hand
+      parentName: ValveBiped.Bip01_L_Forearm
+      position: {x: -0.00000032712705, y: 0.060167212, z: -0.000001044944}
+      rotation: {x: -0.01870639, y: 0.0000000076543065, z: -0.000000118541706, w: 0.99982506}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_L_Hand_end
+      parentName: ValveBiped.Bip01_L_Hand
+      position: {x: -0, y: 0.05110092, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_R_Thigh
+      parentName: ValveBiped.Bip01_Spine
+      position: {x: 0.04, y: 0.00021048776, z: -0.00002347827}
+      rotation: {x: 0.99968076, y: 0.008826272, z: 0.009042286, w: 0.021879101}
+      scale: {x: 0.9999887, y: 0.9999999, z: 0.9999362}
+    - name: RightLowerLeg
+      parentName: ValveBiped.Bip01_R_Thigh
+      position: {x: 0, y: 0.0409, z: 0}
+      rotation: {x: -0, y: -0.000000006468327, z: -1, w: -0.0000001685694}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_R_Foot
+      parentName: RightLowerLeg
+      position: {x: 0, y: -0.037341274, z: 0}
+      rotation: {x: -0.6968948, y: 0.11903922, z: 0.13192806, w: 0.69481105}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_R_Foot_end
+      parentName: ValveBiped.Bip01_R_Foot
+      position: {x: -0, y: 0.08128688, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_R_UpperArm
+      parentName: ValveBiped.Bip01_Spine
+      position: {x: 0.063839644, y: 0.15234275, z: -0.000000014901163}
+      rotation: {x: 0.52738273, y: 0.506932, z: 0.5028408, w: -0.46047646}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1}
+    - name: ValveBiped.Bip01_R_Forearm
+      parentName: ValveBiped.Bip01_R_UpperArm
+      position: {x: 0.000000003958122, y: 0.051579375, z: -0.00000009126961}
+      rotation: {x: -0.009380459, y: -0.00015950201, z: 0.01698905, w: 0.99981165}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_R_Hand
+      parentName: ValveBiped.Bip01_R_Forearm
+      position: {x: 0.0000002766028, y: 0.054397933, z: -0.000001596869}
+      rotation: {x: -0.01486614, y: -0.000000040527084, z: 0.000000028573425, w: 0.9998895}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ValveBiped.Bip01_R_Hand_end
+      parentName: ValveBiped.Bip01_R_Hand
+      position: {x: -0, y: 0.054397773, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: collision
+      parentName: penguin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: tuxpenguin
+      parentName: penguin(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -82,15 +304,15 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: ValveBiped.Bip01_Spine
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
