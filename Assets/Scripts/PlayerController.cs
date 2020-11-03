@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = gameObject.GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         groundedPlayer = controller.isGrounded;
         Vector3 inputMovement = transform.forward * playerSpeed * Input.GetAxisRaw("Vertical");
