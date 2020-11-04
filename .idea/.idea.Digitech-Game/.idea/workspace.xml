@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4a74a43-81e8-4367-9bb7-5e0fbecd21fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Digitech-Game/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Digitech-Game/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Digitech-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Digitech-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,6 +113,7 @@
       <workItem from="1604380552561" duration="620000" />
       <workItem from="1604444045964" duration="212000" />
       <workItem from="1604449841267" duration="2535000" />
+      <workItem from="1604457107885" duration="1215000" />
     </task>
     <servers />
   </component>
@@ -149,9 +148,10 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604090787097" />
     <state x="2536" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604371916923" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603509050695">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="443" y="158" width="479" height="475" key="search.everywhere.popup" timestamp="1604457728283">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="443" y="158" width="479" height="475" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604457728283" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603509050695" />
   </component>
 </project>
