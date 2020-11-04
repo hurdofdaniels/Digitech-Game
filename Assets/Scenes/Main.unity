@@ -1961,6 +1961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143457bdd52807e40b991ffcb89391c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraPos: {fileID: 963194228}
   playerPos: {fileID: 2657006234212914382}
   lerpSpeed: 0.1
   rotationSpeed: 20
