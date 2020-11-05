@@ -15,7 +15,7 @@ public class MinimapScript : MonoBehaviour
 
     //public Transform player;
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         transform.position = new Vector3(playerTransform.position.x, 18.35f, playerTransform.position.z) * Time.deltaTime;
     }
