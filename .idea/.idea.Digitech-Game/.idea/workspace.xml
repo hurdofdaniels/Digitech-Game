@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4a74a43-81e8-4367-9bb7-5e0fbecd21fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Digitech-Game/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2020_7_28_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Digitech-Game/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2020_7_28_AM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Digitech-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Digitech-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinimapScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinimapScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Digitech-Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Digitech-Game/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +43,9 @@
         <option value="$PROJECT_DIR$/Assets/MinimapScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Maze/Maze.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Maze/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MinimapScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -117,6 +116,7 @@
       <workItem from="1604449841267" duration="2535000" />
       <workItem from="1604457107885" duration="1215000" />
       <workItem from="1604549415706" duration="7235000" />
+      <workItem from="1604958875809" duration="643000" />
     </task>
     <servers />
   </component>
